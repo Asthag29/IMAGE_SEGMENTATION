@@ -1,6 +1,5 @@
 # project_name
 
-nuone
 
 ## Project structure
 
@@ -11,34 +10,33 @@ The directory structure of the project looks like this:
 │   └── workflows/
 │       └── tests.yaml
 ├── configs/                  # Configuration files
-├── data/                     # Data directory
-│   ├── processed
-│   └── raw
 ├── dockerfiles/              # Dockerfiles
 │   ├── api.Dockerfile
 │   └── train.Dockerfile
 ├── docs/                     # Documentation
 │   ├── mkdocs.yml
 │   └── source/
-│       └── index.md
-├── models/                   # Trained models
+│       └── index.md                 
 ├── notebooks/                # Jupyter notebooks
-├── reports/                  # Reports
-│   └── figures/
-├── src/                      # Source code
-│   ├── project_name/
+├── src/
+│   |── tests/                # testing
+│   │   ├── __init__.py
+│   │   ├── test_api.py
+│   │   ├── test_data.py
+│   │   └── test_model.py 
+│   ├── train/                # training
 │   │   ├── __init__.py
 │   │   ├── api.py
 │   │   ├── data.py
 │   │   ├── evaluate.py
 │   │   ├── models.py
-│   │   ├── train.py
-│   │   └── visualize.py
-└── tests/                    # Tests
-│   ├── __init__.py
-│   ├── test_api.py
-│   ├── test_data.py
-│   └── test_model.py
+│   │   └── train.py
+│   ├── data/                 # data
+│   │   ├── raw/
+│   │   └── processed/
+│   ├── models/               # Trained models
+│   └──  reports/             # Reports
+│       └── figures/
 ├── .gitignore
 ├── .pre-commit-config.yaml
 ├── LICENSE
@@ -49,7 +47,3 @@ The directory structure of the project looks like this:
 └── tasks.py                  # Project tasks
 ```
 
-
-Created using [mlops_template](https://github.com/SkafteNicki/mlops_template),
-a [cookiecutter template](https://github.com/cookiecutter/cookiecutter) for getting
-started with Machine Learning Operations (MLOps).
