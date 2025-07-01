@@ -6,7 +6,7 @@ from seg_model import FishSegmentation
 from tqdm import tqdm 
 import matplotlib.pyplot as plt
 import typer
-from typing import Optional
+
 
 
 # %%
