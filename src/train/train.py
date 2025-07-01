@@ -47,7 +47,7 @@ def train(model , epochs , train_dataloaders , valid_dataloaders, optimizer, los
             optimizer.zero_grad()
             predicted = model(image)
 
-            loss= nn.BCEWithLogitsLoss()(predicted,mask)
+            loss= nn.BCELoss()(predicted,mask)
             loss.backward()
             optimizer.step()
             
@@ -78,7 +78,7 @@ def train(model , epochs , train_dataloaders , valid_dataloaders, optimizer, los
                 image_valid, mask_valid = image_valid.to(device), mask_valid.to(device)
             
                 predicted = model(image_valid)
-                loss = nn.BCEWithLogitsLoss()(predicted, mask_valid)
+                loss = nn.BCELoss()(predicted, mask_valid)
                 running_val_loss += loss.item()
                 
                 val_bar.set_postfix({
@@ -135,7 +135,7 @@ def test_model(test_dataloader, model_path='../../src/model_paths/best_fish_segm
     
     # Predict
     with torch.no_grad():
-        predictions = model(images)
+        predictions = model(images)            
         
     # Plot first 4 images
     _, axes = plt.subplots(2, 4, figsize=(15, 8))
@@ -157,7 +157,6 @@ def test_model(test_dataloader, model_path='../../src/model_paths/best_fish_segm
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
     plt.tight_layout()
     plt.show()
-
 
 # %%
 

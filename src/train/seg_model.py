@@ -38,7 +38,8 @@ class FishSegmentation(nn.Module):
         
         # Final layer
         self.final = nn.Sequential(
-            nn.Conv2d(64, 1, kernel_size=1)
+            nn.Conv2d(64, 1, kernel_size=1),
+            nn.Sigmoid()
         )
     
     def forward(self, x):
@@ -68,5 +69,8 @@ x = torch.randn(60, 1, 224, 224)  # [batch, channels, height, width]
 output = Network(x)
 print(f"Input shape: {x.shape}")
 print(f"Output shape: {output.shape}")
+print(f"Output min: {output.min().item():.4f}")
+print(f"Output max: {output.max().item():.4f}")
+
 print(f"Model parameters: {sum(p.numel() for p in Network.parameters()):,}")
 # %%
