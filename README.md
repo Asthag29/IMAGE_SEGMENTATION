@@ -69,7 +69,6 @@ This enables reuse, fine-tuning, and reproducible experiments without retraining
 
 The `notebooks/` directory contains Jupyter notebooks used for:
 
-- Exploratory data analysis
 - Visualizing intermediate outputs
 - Experimenting with model variations and hyperparameters
 
