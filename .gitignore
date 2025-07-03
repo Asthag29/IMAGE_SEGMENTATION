@@ -180,3 +180,5 @@ fishenv/
 notebooks/__pycache__/
 tasks.py/
 src/data/
+configs/
+fish_project/configs/
