@@ -4,7 +4,7 @@ A deep learning project to segment fish rib structures from images using a simpl
 
 ---
 
-## 📦 Project Structure
+## 📦 Project Structure ##
 
 ```plaintext
 fish_project/
@@ -81,6 +81,6 @@ These notebooks act as a sandbox for rapid experimentation and visualization.
 
 Install all required dependencies:
 
-```bash
+```bash```
 pip install -r requirements.txt
 
