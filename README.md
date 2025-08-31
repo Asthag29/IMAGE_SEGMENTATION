@@ -8,28 +8,26 @@ A deep learning project to segment fish rib structures from images using a simpl
 
 ```plaintext
 fish_project/
-├── fisherv/                   # Additional utilities or archives
-├── notebooks/                 # Jupyter notebooks for experimentation
-├── src/                       # Source code (extendable)
-├── data/                      # Datasets
-│   ├── Fish_Dataset/
-│   ├── A_Fish_Dataset/
-│   └── NA_Fish_Dataset/
-├── model_paths/               # Trained model checkpoints and metadata
-│   ├── best_fish_seqm...
-│   ├── train/
-├── reports/                   # Output reports
-│   ├── fish-test.png          # Sample mask generated on a test sample
-│   └── loss_graph.png         # Training & validation loss curve
-├── train/                     # Training pipeline code
-│   ├── api.py
-│   ├── dataloaders.py
-│   ├── seg_model.py
-│   └── train.py
+├── notebooks/                    # Jupyter notebooks for experimentation
+├── src/                          # Source code (extendable)
+│  ├── data/                      # Datasets(only structure not pushed here)
+│  │   ├── Fish_Dataset/
+│  │   ├── A_Fish_Dataset/        # augmented dataset
+│  │   └── NA_Fish_Dataset/       # non augmented dataset
+│  ├── model_paths/               # Trained model checkpoints and metadata
+│  │   ├── best_fish_seqmentation
+│  ├── reports/                   # Output reports
+│  │   ├── fish-test.png          # Sample mask generated on a test sample
+│  │   └── loss_graph.png         # Training & validation loss curve
+│  ├── train/                     # Training pipeline code
+│  │   ├── api.py                 # api for downloading data
+│  │   ├── dataloaders.py         # dataloaders
+│  │   ├── seg_model.py           # model architecture
+│  │   └── train.py               # training 
 ├── .gitignore
 ├── .python-version
 ├── README.md
-├── requirements.txt
+├── requirements.txt              # required dependencies
 ```
 
 ## ⚙️ Training Details
@@ -81,5 +79,6 @@ These notebooks act as a sandbox for rapid experimentation and visualization.
 Install all required dependencies:
 
 ```bash```
+
 pip install -r requirements.txt
 
