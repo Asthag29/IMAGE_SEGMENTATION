@@ -30,7 +30,7 @@ fish_project/
 ├── .python-version
 ├── README.md
 ├── requirements.txt
-
+```
 
 ## ⚙️ Training Details
 
